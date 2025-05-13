@@ -1,5 +1,7 @@
 package Tarea_Sockets_JavierContrerasLopez_JeaustinMoralesHidalgo.src;
-
+//** Aurtores: Jeaustin Morales Hidalgo(Servidor) Javier Contreras Lopéz (Cliente).
+/* Fecha: 12/05/2025.
+/*Creacion del servidor  para realizar la operacion de cambiar un numero a numero binario resiviendo los datos por parte del cliente*/
 
 import java.io.*;
 import java.net.*;
@@ -8,7 +10,7 @@ public class TCP_SERVIDOR {// creamos la clase TCP_SERVIDOR
         ServerSocket welcomeSocket = new ServerSocket(7777);//Creamos el socket
         System.out.println("Servidor TCP esperando conexiones...");
 
-        while (true) {
+        while (true) {//Inicio while
             Socket connectionSocket = welcomeSocket.accept();
             System.out.println("Cliente conectado desde: " + connectionSocket.getInetAddress());
 
@@ -22,14 +24,14 @@ public class TCP_SERVIDOR {// creamos la clase TCP_SERVIDOR
                 String binario = Integer.toBinaryString(numero);
                 outToClient.writeBytes(binario + '\n');
                 System.out.println("Recibido: " + numero + " → Enviado: " + binario);
-            } catch (NumberFormatException excepcion) {// si da errorla variables se envia una exepcion
+            } catch (NumberFormatException excepcion) {// si da error la variable, se envia una exepcion
                 outToClient.writeBytes("ERROR: Entrada no válida\n");
                 System.out.println("Entrada inválida: " + entrada);
             }
 
             connectionSocket.close();// finaliza la conexion con el cliente 
             System.out.println("Conexión con cliente finalizada.\n");
-        }
-    }
-}
+        }//Fin del while
+    }//Fin del main
+}//Fin de la clase
 
