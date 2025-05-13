@@ -1,7 +1,7 @@
 package Tarea_Sockets_JavierContrerasLopez_JeaustinMoralesHidalgo.src;
 
 
-    import java.io.*;
+import java.io.*;
 import java.net.*;
 public class TCP_SERVIDOR {// creamos la clase TCP_SERVIDOR
     public static void main(String argv[]) throws Exception {
@@ -27,7 +27,7 @@ public class TCP_SERVIDOR {// creamos la clase TCP_SERVIDOR
                 System.out.println("Entrada inválida: " + entrada);
             }
 
-            connectionSocket.close();// finaliza la conexion con el cliente
+            connectionSocket.close();// finaliza la conexion con el cliente 
             System.out.println("Conexión con cliente finalizada.\n");
         }
     }
