@@ -22,7 +22,7 @@ public class TCP_SERVIDOR {// creamos la clase TCP_SERVIDOR
                 String binario = Integer.toBinaryString(numero);
                 outToClient.writeBytes(binario + '\n');
                 System.out.println("Recibido: " + numero + " → Enviado: " + binario);
-            } catch (NumberFormatException excepcion) {// si da errorla variables se envia una exepcion
+            } catch (NumberFormatException excepcion) {// si da error la variable, se envia una exepcion
                 outToClient.writeBytes("ERROR: Entrada no válida\n");
                 System.out.println("Entrada inválida: " + entrada);
             }
