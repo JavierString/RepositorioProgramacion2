@@ -1,4 +1,4 @@
-package Tarea_Sockets_JavierContrerasLopez_JeaustinMoralesHidalgo.src.paquete;
+package Tarea_Sockets_JavierContrerasLopez_JeaustinMoralesHidalgo.src;
 import java.io.*;
 import java.net.*;
 import javax.swing.*;
