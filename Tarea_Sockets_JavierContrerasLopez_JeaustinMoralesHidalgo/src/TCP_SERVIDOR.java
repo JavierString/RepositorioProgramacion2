@@ -7,7 +7,7 @@ import java.io.*;
 import java.net.*;
 public class TCP_SERVIDOR {// creamos la clase TCP_SERVIDOR
     public static void main(String argv[]) throws Exception {
-        ServerSocket welcomeSocket = new ServerSocket(7777);//Creamos el socket
+        ServerSocket welcomeSocket = new ServerSocket(4357);//Creamos el socket
         System.out.println("Servidor TCP esperando conexiones...");
 
         while (true) {//Inicio while
