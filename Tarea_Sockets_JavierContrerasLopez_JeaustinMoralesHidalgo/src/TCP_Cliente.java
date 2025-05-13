@@ -35,7 +35,7 @@ public class TCP_Cliente {
 
         try {
             //se crea un objeto cliente de tipo Socker con su hostname y en el puerto 7777
-            Socket clientSocket = new Socket("hostname", 7777);
+            Socket clientSocket = new Socket("DESKTOP-4T1NPFT", 7777);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
