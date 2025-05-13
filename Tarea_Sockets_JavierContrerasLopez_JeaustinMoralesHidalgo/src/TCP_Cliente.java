@@ -45,9 +45,17 @@ public class TCP_Cliente extends JFrame {
     // Campo de texto para ingresar el número decimal
     campoEntrada = new JTextField();
 
+
     // Botones de enviar y salir
     botonEnviar = new JButton("Enviar");
     botonSalir = new JButton("Salir");
+
+        try {
+            //se crea un objeto cliente de tipo Socker con su direccion ip y en el puerto 4357
+            Socket clientSocket = new Socket("192.168.0.3", 4357);
+            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
 
     // Panel para el campo de entrada con su etiqueta
     JPanel entradaPanel = new JPanel(new BorderLayout(5, 5));
@@ -85,7 +93,7 @@ public class TCP_Cliente extends JFrame {
     botonEnviar.addActionListener(e -> enviarNumero());
 
     // Acción que finaliza el programa al presionar el botón salir
-    botonSalir.addActionListener(e -> System.exit(0));
+    botonSalir.addActionListener(exe-> System.exit(0));
   }
 
   // Método que maneja el envío del número y la conexión al servidor
