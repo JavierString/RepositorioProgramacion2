@@ -96,7 +96,7 @@ public class TCPClienteGUI extends JFrame {
 
         try {
             // Se crea un objeto cliente de tipo Socket con su hostname y puerto
-            Socket clientSocket = new Socket("192.168.0.1", 2000);
+            Socket clientSocket = new Socket("192.168.0.10", 2777);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
