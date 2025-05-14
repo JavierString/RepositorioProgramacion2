@@ -66,18 +66,18 @@ public class TCPClienteGUI extends JFrame {
         areaSalida.setWrapStyleWord(true);
         JScrollPane scrollPane = new JScrollPane(areaSalida);
 
-        // Agregar todo al panel principal
+        // Agrega todo al panel principal
         panel.add(entradaPanel, BorderLayout.NORTH);
         panel.add(scrollPane, BorderLayout.CENTER);
         panel.add(botonesPanel, BorderLayout.SOUTH);
 
-        // Agregar el panel al JFrame
+        // Agrega el panel al JFrame
         add(panel);
 
-        // Acción del botón Enviar
+        // acción del botón Enviar
         botonEnviar.addActionListener(e -> enviarNumero());
 
-        // Acción del botón Salir
+        // esta es la acción del botón Salir
         botonSalir.addActionListener(e -> {
             setVisible(false);
             dispose();
@@ -96,7 +96,7 @@ public class TCPClienteGUI extends JFrame {
 
         try {
             // Se crea un objeto cliente de tipo Socket con su hostname y puerto
-            Socket clientSocket = new Socket("192.168.0.3", 4357);
+            Socket clientSocket = new Socket("localhost", 4357);
             DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
