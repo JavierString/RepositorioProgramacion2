@@ -17,6 +17,13 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 public class RegistroUsuarioGUI extends JFrame{
 //atributod privados para ingresar los datos en el panel
+
+
+
+
+
+
+
     private JTextField nombre, telefono, correo, cedula;
     private JTextArea areaConsulta;
     private JTextField cedulaBuscar, cedulaEliminar;
